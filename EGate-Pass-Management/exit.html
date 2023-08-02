@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta
+	name="viewport"
+	content="width=device-width,
+			initial-scale=1.0"/>
+	<link rel="stylesheet" href="style.css"
+		class="css" />
+</head>
+<style>
+    * {
+margin: 0;
+padding: 0;
+
+}
+
+body {
+    
+font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+font-weight: bold;
+
+}
+
+.container {
+height: 900px;
+width: 800px;
+background-image: linear-gradient(#1e6b30, #308d46);
+top: 50%;
+left: 50%;
+position: absolute;
+transform: translate(-50%, -50%);
+position: absolute;
+border-bottom-left-radius: 180px;
+border-top-right-radius: 150px;
+}
+
+.main-content {
+height: 235px;
+background-color: #1b9236;
+border-bottom-left-radius: 90px;
+border-bottom-right-radius: 80px;
+border-top: #1e6b30;
+}
+
+.text {
+text-align: center;
+font-size: 300%;
+text-decoration: aliceblue;
+color: aliceblue;
+}
+
+.course {
+color: black;
+font-size: 25px;
+font-weight: bolder;
+}
+
+.centre-content {
+height: 180px;
+margin: -70px 30px 20px;
+color: aliceblue;
+text-align: center;
+font-size: 20px;
+border-radius: 25px;
+padding-top: 0.5px;
+background-image: linear-gradient(#1e6b30, #308d46);
+}
+
+.centre-content-h1 {
+padding-top: 30px;
+padding-bottom: 30px;
+font-weight: normal;
+}
+
+.price {
+font-size: 60px;
+margin-left: 5px;
+bottom: 15px;
+position: relative;
+}
+
+.pay-now-btn {
+cursor: pointer;
+color: #fff;
+height: 50px;
+width: 290px;
+border: none;
+margin: 5px 30px;
+background-color: rgb(71, 177, 61);
+position: relative;
+}
+
+.card-details {
+background: rgb(8, 49, 14);
+color: rgb(225, 223, 233);
+margin: 10px 30px;
+padding: 10px;
+/* border-bottom-left-radius: 80px; */
+}
+
+.card-details p {
+font-size: 15px;
+}
+
+.card-details label {
+font-size: 15px;
+line-height: 35px;
+}
+
+.submit-now-btn {
+cursor: pointer;
+color: #fff;
+height: 30px;
+width: 240px;
+border: none;
+margin: 5px 30px;
+background-color: rgb(71, 177, 61);
+}
+
+</style>
+<body>
+    
+	<div class="container">
+	<div class="main-content">
+		<p class="text">GATEPASS</p>
+	</div>
+
+	<div class="centre-content">
+		<h1 class="price">GATEPASS<span>/-</span></h1>
+		<p class="course">
+		EXIT PASS
+		</p>
+	</div>
+
+	<P style="margin-left:40% ; color: #fff;">FILL THIS!</p></br></br>
+
+		<div class="card-number">
+		   <label style="margin-left:30% ;"> NAME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+		   <input
+			type="text"
+			class="card-number-field"/>
+        </div>
+        
+			
+		
+		
+		<div class="date-number">
+		<label style="margin-left:30% ;">  Date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
+		<input type="text" class="date-number-field"
+				placeholder="DD-MM-YY" />
+		</div>
+        <div class="date-number">
+            <label style="margin-left:30% ;">  EXIT TIME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input type="text" class="date-number-field"
+                    placeholder="00:00" />
+            </div>
+        
+//user like'%"+query+"%' or date like'%"+query+"%' or  exittime like'%"+query+"%' or reg_num like'%"+query+"%' or phone_num like'%"+query+"%' or destination like'%"+query+"%'";
+                <!--<%
+                     String host= "jdbc:mysql://localhost:3306/gatepass";
+                     Class.forName("com.mysql.jdbc.Driver");
+                    Connection con = DriverManager.getConnection(host,"root","");
+                    Statement stmt = con.createStatement(); 
+                     String query =  "select *from reject";
+                    ResultSet rs = stmt.executeQuery(query);
+                     while(rs.next()){
+                %>
+                <tr>
+                    <td><%=rs.getString("user")%></td>
+                    <td><%=rs.getString("date")%></td>
+                    <td><%=rs.getString("exit_time")%></td>
+                    <td><%=rs.getString("reg_num")%></td>
+                    <td><%=rs.getString("phone_num")%></td>
+                    <td><%=rs.getString("destination")%></td>
+                    <td style="color:red;">Rejected</td>
+
+                    <a href="adt.jsp" id="b"><button class="b">Back</button></a>
+                </tr>-->
+		<div class="cvv-number">
+		<label style="margin-left:30% ;"> REG NUM&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
+		<input type="text" class="cvv-number-field"
+				placeholder="" />
+		</div>
+		<div class="cvv-number">
+			<label style="margin-left:30% ;"> PHONE NUM&nbsp;&nbsp;&nbsp;&nbsp;</label>
+			<input type="text" class="cvv-number-field"
+					placeholder="" />
+			</div>
+		<div class="nameholder-number">
+		<label style="margin-left:30% ;"> DESTINATION &nbsp;&nbsp;</label>
+		<input
+			type="text"
+			class="card-name-field"
+			placeholder=""/>
+		</div></br></br></br>
+		<button type="submit"
+				class="submit-now-btn" style="margin-left:30% ;text-decoration: none;"><a href="thank.html" style="text-decoration: none; color: #fff;">
+		submit</a>
+		</button>
+	</div>
+	</div>
+</body>
+</html>

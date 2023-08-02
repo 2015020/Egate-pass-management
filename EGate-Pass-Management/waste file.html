@@ -1,0 +1,60 @@
+admin<!-- <%
+                     String host= "jdbc:mysql://localhost:3306/gatepass";
+                     Class.forName("com.mysql.jdbc.Driver");
+                    Connection con = DriverManager.getConnection(host,"root","");
+                    Statement stmt = con.createStatement(); 
+                     String query =  request.getParameter("q");
+                     String data;
+                     if(query!=null){
+                        data = "select *from accept where reg_num = '"+name+"'" ;
+                        %>
+                    ResultSet rs = stmt.executeQuery(query);
+                     while(rs.next()){
+                %>
+                <tr>
+                    <td><%=rs.getString("user")%></td>
+                    <td><%=rs.getString("date")%></td>
+                    <td><%=rs.getString("in_time")%></td>
+                    <td><%=rs.getString("reg_num")%></td>
+                    <td><%=rs.getString("Phone_num")%></td>
+                    <td><%=rs.getString("Department")%></td>
+                    
+                </tr>
+                <%
+                 }
+                %> -->
+
+
+
+
+
+                adminiout
+
+                <!-- <script type="text/javascript">
+        function  {
+        var s = document.getElementById("s");
+        var selectedText = s.options[s.selectedIndex].innerHTML;
+        var selectedValue = s.value;
+        alert("Selected Text: " + selectedText + " Value: " + selectedValue);
+    }
+    function one() {
+				var select = document.getElementById('s');
+				var option = select.options[select.selectedIndex];
+				document.getElementById('submit').value = option.value;
+    }
+</script>-->
+
+
+
+<!--<td><form>
+                            <label for="status">status:</label>
+                            <select name="cars" id="s" onchange="one()">
+                                <option value=""></option>
+                                <option value="act">accept</option>
+                                <option value="rej">reject</option>
+                            </select>
+                            <input type="submit" value="Submit" id="submit">
+                            <input type="text" id="value">
+                        </form>
+                    </td><input type="text" name="myText" value="Norway"
+   selectBoxOptions="Canada;Denmark;Finland;Germany;Mexico"> -->
